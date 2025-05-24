@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QR Student Attendance Reader</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+
+    <div class="container d-flex flex-column justify-content-center align-items-center vh-100">
+      <div class="text-center mb-4">
+        <h1 class="fw-bold">QR Student Attendance Reader</h1>
+      </div>
+
+      <div class="d-grid gap-3 col-6 mx-auto">
+        <button class="btn btn-primary btn-lg" onclick="registerStudent()">Register Student</button>
+        <!-- <button class="btn btn-success btn-lg" onclick="scanQRCode()">Scan QR Code</button> -->
+        <button class="btn btn-info btn-lg" onclick="goToDashboard()">View Attendance History</button>
+        <button class="btn btn-dark btn-lg" onclick="adminLogin()">Admin Login</button>
+        <button class="btn btn-secondary btn-lg" onclick="instructorLogin()">Instructor Login</button>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle (if you need JS for any components later) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function registerStudent() {
+            window.location.href = "register.php";
+        }
+
+        // function scanQRCode() {
+        //     window.location.href = "scanQRCode.html";
+        // }
+
+        function goToDashboard() {
+            window.location.href = "recordAttendance.php";
+        }
+
+        function adminLogin() {
+            window.location.href = "admin/adminLogin.html";
+        }
+
+        function instructorLogin() {
+            window.location.href = "instructor/instructorLogin.html";
+        }
+    </script>
+  </body>
+</html>
